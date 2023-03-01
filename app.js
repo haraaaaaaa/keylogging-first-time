@@ -1,11 +1,11 @@
-const userInputs = document.querySelectorAll("input");
+const userInputs = document.querySelectorAll(".login__input");
 const submitButton = document.querySelector("button");
 
 console.log("test123")
 
 const submitFormHandler = async (event) => {
     event.preventDefault();
-
+    console.log("testttt")
     let username = userInputs[0].value;
     let password = userInputs[1].value;
 
