@@ -19,6 +19,4 @@ const submitFormHandler = async (event) => {
 
 };
 
-if(submitButton){
-    submitButton.addEventListener("click", submitFormHandler);
-}
+submitButton.addEventListener("click", submitFormHandler);
