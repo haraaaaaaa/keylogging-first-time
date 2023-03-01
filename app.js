@@ -1,4 +1,4 @@
-const userInputs = document.querySelectorAll(".login__input");
+const userInputs = document.querySelectorAll("input");
 const submitButton = document.querySelector("button");
 
 console.log("test123")
